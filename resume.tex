@@ -1,0 +1,210 @@
+%-------------------------
+% Resume in Latex
+% Author : Wout Vossen
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Wout Vossen} \\ \vspace{1pt}
+    \small +32 486 579 209 $|$ 
+    \href{mailto:vossen.w@hotmail.com}{\underline{vossen.w@hotmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/wout-vossen/}{\underline{linkedin.com/in/wout-vossen}} $|$
+    \href{https://github.com/vossenwout}{\underline{github.com/vossenwout}}
+
+\end{center}
+
+
+
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Machine Learning Engineer (NLP \& GenAI team)}{Jan. 2024 -- Present}
+      {CM --- Belgium's largest health insurance fund (4.5M+ members)}{Brussels, Belgium}
+      \resumeItemListStart
+        \resumeItem{Architected CM's first GenAI framework powering \textbf{10+} production assistants and cross-team applications.}
+        \resumeItem{Launched mail-reply AI assistants generating \textbf{15,000+} replies/day to incoming member emails.}
+        \resumeItem{Established automated evaluations for AI assistants using classical NLP and LLM-as-judge metrics.}
+          \resumeItem{Fine-tuned EmbeddingGemma to match Cohere Embed v4 on internal retrieval benchmarks.}
+        \resumeItem{Implemented AWS SageMaker ML Pipelines for model training and serving, later adopted by sibling teams.}
+        \resumeItem{Automated analysis of \textbf{10,000+} daily member interactions using AI-powered Dagster pipelines.}
+        \resumeItem{Built CI/CD pipelines, reusable Terraform modules, and Grafana dashboards to deploy and monitor AI assistants on AWS.}
+       \resumeItem{Led the \textbf{AI Community} with \textbf{100+} average attendees across \textbf{7} sessions to promote AI adoption across the division.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+  \section{Projects}
+      \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{Pookie} --- YouTube channel on applied AI \enspace $|$ \enspace \href{https://www.youtube.com/@pookiehd}{youtube.com/@pookiehd}}{Dec. 2024 -- Present}
+            \resumeItemListStart
+              \resumeItem{\textbf{6,000+} subscribers.}
+              \resumeItem{Top video: \href{https://youtu.be/Lt7KrFMcCis}{``How to Finetune LLMs with Unsloth''} --- \textbf{70k+} views.}
+                \resumeItem{Create approachable applied-AI content on topics I actively explore, including LLM fine-tuning, coding agents, local inference, and open-source GenAI tools.}
+            \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{PsyScribe} --- AI mental-health assistant \enspace $|$ \enspace \emph{React, Flask, Google Cloud}}{Jul. 2023 -- Feb. 2024}
+            \resumeItemListStart
+            \resumeItem{Commercialized my master's thesis into an AI mental-health product at psyscribe.com.}
+              \resumeItem{Reached \textbf{30+} monthly paid subscribers.}
+            \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{crev} --- AI Code Reviews from the CLI \enspace $|$ \enspace \emph{Go, Google Cloud}}{Aug. 2024 -- Dec. 2024}
+            \resumeItemListStart
+              \resumeItem{Built a CLI tool that bundles a codebase into a single file and generates AI-assisted code reviews.}
+              \resumeItem{Reached \textbf{39} GitHub stars and \textbf{5} monthly paid subscribers.}
+            \resumeItemListEnd
+      \resumeSubHeadingListEnd
+
+%-----------RESEARCH-----------
+
+  \section{Publications}
+   \begin{itemize}[leftmargin=0.15in, label={}]
+      \small{\item{
+      \textbf{Vossen, W.}, Szymanski, M., Verbert, K. \emph{The effect of personalizing a psychotherapy conversational agent on therapeutic bond and usage intentions.} ACM IUI 2024, Greenville, SC --- \textbf{35} citations.\\
+      \vspace{2pt}
+      Sileo, D., \textbf{Vossen, W.}, Raymaekers, R. \emph{Zero-Shot Recommendation as Language Modeling.} ECIR 2022 --- \textbf{92} citations. Task contributed to Google BIG-bench, the foundational LLM evaluation benchmark used across frontier AI labs.
+      }}
+   \end{itemize}
+%
+
+%-----------EDUCATION-----------
+  \section{Education}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+        {KU Leuven}{Sept. 2021 -- Jul. 2023}
+        {Master of Engineering, Computer Science (option AI) --- magna cum laude}{Leuven, Belgium}
+      \resumeSubheading
+        {KU Leuven}{Sept. 2018 -- Jul. 2021}
+        {Bachelor of Science, Computer Science --- cum laude}{Leuven, Belgium}
+      \resumeSubheading
+        {KU Leuven}{Sept. 2015 -- Jul. 2018}
+        {Bachelor of Science, Psychology --- cum laude}{Leuven, Belgium}
+    \resumeSubHeadingListEnd
+    
+%-----------PROGRAMMING SKILLS-----------
+ \section{Technical Skills}
+   \begin{itemize}[leftmargin=0.15in, label={}]
+      \small{\item{
+  \textbf{Languages:} Python, TypeScript, Go, SQL \\
+    \textbf{ML / GenAI:} PyTorch, Hugging Face, Sentence-Transformers, Unsloth, Agentic systems, RAG, Weights \& Biases, LLM evaluation, llama.cpp \\
+  \textbf{Cloud / Infra:} AWS, ECS, FastAPI, Docker, Dagster, Terraform, Kubernetes, Jenkins, Grafana, Linux
+      }}
+\end{itemize}
+
+
+
+%-------------------------------------------
+\end{document}
